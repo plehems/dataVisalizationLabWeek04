@@ -273,6 +273,77 @@
             </div>
         </figure>
     </div>
+    <div id="scene-grouped">
+        <figure id="scene-grouped-figure">
+            <figcaption>Grouped windows scene (Step 4)</figcaption>
+            <div class="svg-container">
+                <svg
+                    id="scene-grouped"
+                    viewBox="0 0 800 500"
+                    width="800" height="500"
+                    aria-labelledby="svgTitleGrouped svgDescGrouped"
+                    role="img"
+                >
+                    <title id="svgTitleGrouped">Grouped Windows SVG House and Garden Scene</title>
+                    <desc id="svgDescGrouped">An SVG illustration of a house and garden with grouped window elements for reusability.</desc>
+                    <style>
+                        /* Scoped styles for the grouped SVG */
+                        #scene-grouped .window {
+                            fill: #add8e6;
+                            stroke: #4682b4;
+                            stroke-width: 2;
+                        }
+                    </style>
+                    <!-- Sky (rect) -->
+                    <rect x="0" y="0" width="800" height="300" fill="#aee7ff" />
+                    <!-- Grass (rect) -->
+                    <rect x="0" y="300" width="800" height="200" fill="#7ed957" />
+                    <!-- Sun (circle) -->
+                    <circle cx="100" cy="100" r="50" fill="#ffe066" stroke="#f9d923" stroke-width="4" />
+                    <!-- Cloud (ellipse) -->
+                    <ellipse cx="250" cy="90" rx="50" ry="30" fill="#fff" opacity="0.9" />
+                    <ellipse cx="290" cy="90" rx="30" ry="20" fill="#fff" opacity="0.9" />
+                    <ellipse cx="230" cy="110" rx="25" ry="15" fill="#fff" opacity="0.9" />
+                    <!-- Tree trunk (rect) -->
+                    <rect x="650" y="260" width="20" height="70" fill="#8d5524" />
+                    <!-- Tree foliage (circle) -->
+                    <circle cx="660" cy="250" r="35" fill="#3cb371" />
+                    <!-- House body (rect) -->
+                    <rect x="350" y="220" width="140" height="100" fill="#f4a460" stroke="#b97a56" stroke-width="3" />
+                    <!-- Roof (polygon) -->
+                    <polygon points="340,220 420,160 490,220" fill="#b22234" stroke="#7a1c1c" stroke-width="3" />
+                    <!-- Chimney (rect) -->
+                    <rect x="460" y="170" width="20" height="40" fill="#a9a9a9" stroke="#7a7a7a" stroke-width="2" />
+                    <!-- Door (rect) -->
+                    <rect x="410" y="270" width="30" height="50" fill="#deb887" stroke="#8b5c2a" stroke-width="2" />
+                    <!-- Door knob (circle) -->
+                    <circle cx="435" cy="295" r="4" fill="#333" />
+
+                    <!-- Grouped window definition -->
+                    <g id="window" class="window">
+                        <!-- Window rectangle -->
+                        <rect width="35" height="30" />
+                        <!-- Vertical mullion -->
+                        <line x1="17.5" y1="0" x2="17.5" y2="30" />
+                        <!-- Horizontal mullion -->
+                        <line x1="0" y1="15" x2="35" y2="15" />
+                    </g>
+
+                    <!-- Left window using <use> with translate -->
+                    <use href="#window" transform="translate(365,240)" /> <!-- Positioned at (365, 240) -->
+                    <!-- Right window using <use> with translate -->
+                    <use href="#window" transform="translate(445,240)" /> <!-- Positioned at (445, 240) -->
+
+                    <!-- Fence (polyline) -->
+                    <polyline points="200,320 210,350 220,320 230,350 240,320 250,350 260,320 270,350 280,320 290,350 300,320" fill="none" stroke="#d2b48c" stroke-width="6" />
+                    <!-- Curved garden path (path) -->
+                    <path d="M430,320 Q420,400 350,450 Q500,480 430,320" fill="#e0cda9" stroke="#bfa76f" stroke-width="4" opacity="0.8" />
+                    <!-- Caption (text) -->
+                    <text x="400" y="490" text-anchor="middle" font-size="28" fill="#333" font-family="Arial, sans-serif">SVG House &amp; Garden</text>
+                </svg>
+            </div>
+        </figure>
+    </div>
     <p style="color:#555;max-width:700px;text-align:center;">This SVG scene demonstrates all basic SVG shapes: <code>&lt;rect&gt;</code>, <code>&lt;circle&gt;</code>, <code>&lt;ellipse&gt;</code>, <code>&lt;line&gt;</code>, <code>&lt;polyline&gt;</code>, <code>&lt;polygon&gt;</code>, <code>&lt;path&gt;</code>, and <code>&lt;text&gt;</code>. All elements are accessible and styled for clarity.</p>
 </body>
 </html>
